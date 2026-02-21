@@ -1,0 +1,34 @@
+{
+  "name": "civic-bridge",
+  "version": "1.0.0",
+  "description": "Civic empowerment platform for non-native English speakers in Amherst, MA",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "concurrently \"node server.js\" \"vite\" --names \"backend,frontend\" --prefix-colors \"cyan,magenta\"",
+    "build": "vite build",
+    "start": "NODE_ENV=production node server.js",
+    "scrape": "node scripts/scrapeMeetings.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.36.3",
+    "cheerio": "^1.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "express-session": "^1.18.1",
+    "nanoid": "^3.3.8",
+    "node-cron": "^3.0.3",
+    "node-fetch": "^2.7.0",
+    "react-hot-toast": "^2.5.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vite": "^6.0.3"
+  }
+}
